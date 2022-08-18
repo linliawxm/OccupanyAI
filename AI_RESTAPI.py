@@ -6,29 +6,10 @@ import os
 import sys
 import urllib.request
 import time
-
+import requests
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib.lines as mlines
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import Sequential, Model
-from tensorflow.keras.layers import LSTM, Dense, Dropout, Input, RepeatVector, TimeDistributed
-from tensorflow.keras.layers import InputLayer
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import *
-from tensorflow.keras.callbacks import ModelCheckpoint
-from tensorflow.keras.losses import MeanSquaredError
-from tensorflow.keras.metrics import RootMeanSquaredError
-from tensorflow.keras.optimizers import Adam
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-from scipy.spatial import distance_matrix
-from keras.models import load_model
-import neptune.new as neptune
-from neptune.new.integrations.tensorflow_keras import NeptuneCallback
-import requests
+import json
 
 # df = pd.read_csv("drive/My Drive/ColabDrive/adjacent_3_room_occupancy.csv", index_col=False)
 df = pd.read_csv("adjacent_3_room_occupancy.csv", index_col=False)
